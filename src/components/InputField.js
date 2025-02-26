@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, TextInput, StyleSheet } from "react-native";
+import { View, Text, TextInput, StyleSheet,Dimensions } from "react-native";
+const windowWidth = Dimensions.get("window").width;
 
 const InputField = ({ label, value, onChangeText, secureTextEntry = false }) => {
   return (
@@ -20,9 +21,10 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   label: {
-    fontSize: 14,
+    fontFamily: "DMSans-Regular",
+    fontSize:windowWidth*0.04,
     fontWeight: "bold",
-    marginBottom: 5,
+    marginBottom: windowWidth*0.02,
   },
   input: {
     height: 45,

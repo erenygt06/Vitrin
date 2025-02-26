@@ -18,10 +18,9 @@ const Profil = () => {
 
   return (
     <View style={styles.container}>
-      {/* Profil Başlığı */}
+
       <Text style={styles.title}>Profil</Text>
 
-      {/* Form Alanları */}
       <View style={styles.formContainer}>
         <InputField label="E-mail" value={email} onChangeText={setEmail} />
         <InputField label="İsim" value={firstName} onChangeText={setFirstName} />
@@ -33,7 +32,7 @@ const Profil = () => {
         />
       </View>
 
-      {/* Kaydet Butonu */}
+      
       <SaveButton onPress={handleSave} />
     </View>
   );
@@ -47,6 +46,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
   title: {
+    fontFamily: "DMSerifDisplay-Regular",
     fontSize: 32,
     fontWeight: "bold",
     marginBottom: 20,

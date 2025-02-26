@@ -68,7 +68,7 @@ const AddSection = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
         <Text style={styles.headerTitle}>Senin Vitrin Bölümlerin</Text>
         <TouchableOpacity onPress={() => navigation.navigate("Vitrin")}>
@@ -103,12 +103,13 @@ const AddSection = () => {
         <Text style={styles.addSectionText}>Bölüm</Text>
         <Text style={styles.plusSign}>+</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   headerminiTitle: {
+    fontFamily:"DMSans-Regular",
     marginTop: windowWidth * 0.05,
     marginBottom: windowWidth * 0.05,
   },
@@ -124,8 +125,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerTitle: {
-    fontSize: windowWidth * 0.05,
-    fontWeight: "bold",
+    fontFamily:"DMSerifDisplay-Regular",
+    fontSize: windowWidth * 0.06,
+    fontWeight: "400",
     color: "#222",
   },
   cancelIcon: {
@@ -158,8 +160,8 @@ const styles = StyleSheet.create({
     marginRight: windowWidth * 0.03,
   },
   addSectionTitle: {
+    fontFamily:"DMSerifDisplay-Regular",
     fontSize: windowWidth * 0.05,
-    fontWeight: "bold",
     marginTop: windowWidth * 0.05,
     textAlign: "center",
   },
@@ -175,6 +177,7 @@ const styles = StyleSheet.create({
     marginVertical: windowWidth * 0.03,
   },
   addSectionText: {
+    fontFamily:"DMSans-Regular",
     fontSize: windowWidth * 0.04,
   },
   plusSign: {

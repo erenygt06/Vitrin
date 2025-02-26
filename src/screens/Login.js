@@ -55,8 +55,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   title: {
-    marginBottom:windowWidth*0.1,
-    fontSize: windowWidth * 0.095,
+    fontFamily: "DMSerifDisplay-Regular",
+    marginBottom:windowWidth*0.07,
+    fontSize: windowWidth * 0.1,
     textAlign: 'left', 
     alignSelf: 'flex-start', 
   },

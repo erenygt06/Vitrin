@@ -83,11 +83,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   headerTitle: {
-    fontSize: windowWidth*0.045,
+    fontFamily:"DMSerifDisplay-Regular",
+    fontSize: windowWidth*0.05,
     fontWeight: 'bold',
   },
   doneText: {
-    fontSize: 16,
+    fontFamily:"DMSans-Regular",
+    fontSize:windowWidth*0.04,
     fontWeight: 'bold',
     color: 'black',
   },

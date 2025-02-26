@@ -70,13 +70,13 @@ const Vitrin = () => {
     <Text style={styles.addSocialLink}>Sosyal Medyanı Bağla</Text>
   </TouchableOpacity>
 
-  {/* 📌 Yatay Kaydırılabilir Bölüm Başlıkları */}
+  
   <ScrollView horizontal style={styles.sectionScrollView} showsHorizontalScrollIndicator={false}>
     {addedSections.length > 0 ? (
       addedSections.map((section) => (
         <TouchableOpacity 
           key={section.id} 
-          style={styles.sectionCard} // 🔹 Kutu tasarımı
+          style={styles.sectionCard} 
           onPress={() => {
             navigation.navigate("CreatingCollection", {
               sectionId: section.id,
@@ -174,25 +174,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#e0e0e0',
   },
   profileName: {
-    fontSize:windowWidth*0.07,
+    fontFamily:"DMSerifDisplay-Regular",
+    fontSize:windowWidth*0.065,
     fontWeight: 'bold',
     marginTop: windowWidth*0.03,
   },
   profileDescription: {
+    fontFamily:"DMSerifDisplay-Regular",
     fontSize:windowWidth*0.035,
     color: '#777',
     marginTop: 5,
   },
   addSocialLink: {
+    fontFamily:"DMSans-Bold",
     fontSize:windowWidth*0.035,
-    fontWeight: 'bold',
     color: 'black',
     marginTop:windowWidth*0.005,
   },
   addButton: {
     position: 'absolute',
-    bottom:windowWidth*0.03,
-    right:windowWidth*0.02,
+    bottom:windowWidth*0.06,
+    right:windowWidth*0.03,
     backgroundColor: 'white',
     paddingVertical:windowWidth*0.03,
     paddingHorizontal: windowWidth*0.03,
@@ -206,9 +208,10 @@ const styles = StyleSheet.create({
     elevation:  windowWidth*0.03,
   },
   addButtonText: {
+    fontFamily:"DMSans-Bold",
     color: 'black',
     fontSize: windowWidth * 0.04,
-    fontWeight: '600',
+    fontWeight: '500',
   },
 
   bottomSheetContainer: {
@@ -229,10 +232,11 @@ const styles = StyleSheet.create({
     maxHeight: windowWidth * 1.2, 
   },
   bottomSheetTitle: {
+    fontFamily:"DMSans-Bold",
     marginLeft:windowWidth*0.68,
     fontSize: windowWidth*0.04,
     fontWeight: 'bold',
-    marginBottom: 15,
+    marginBottom: windowWidth*0.015,
     color:"white",
   },
   sheetButton: {
@@ -261,6 +265,7 @@ const styles = StyleSheet.create({
   },
   sheetButtonTextDark: {
     fontSize: windowWidth*0.035,
+    fontFamily:"DMSans-Bold",
     fontWeight: 'bold',
     color: 'white',
   },
@@ -275,7 +280,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   closeButtonText: {
-    fontSize: 14,
+    fontSize: windowWidth*0.035,
     fontWeight: 'bold',
   },
   noSectionsText: {

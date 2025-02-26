@@ -113,7 +113,7 @@ const CreatingCollection = () => {
         <Text style={styles.actionText}>SOSYAL MEDYA GÖNDERİSİ BAĞLA</Text>
       </View>
 
-      {/* 📌 Resim galerisi */}
+     
       <FlatList
         data={galleryImages}
         keyExtractor={(item, index) => index.toString()}
@@ -124,12 +124,12 @@ const CreatingCollection = () => {
         style={styles.imageContainer}
       />
 
-      {/* 📌 Ürün ekleme butonu */}
+      
       <TouchableOpacity style={styles.addButton} onPress={() => setModalVisible(true)}>
         <Text style={styles.addButtonText}>+ ÜRÜN EKLE</Text>
       </TouchableOpacity>
 
-      {/* 📌 Ürün ekleme Modal'ı */}
+      
       <Modal
         animationType="fade"
         transparent={true}
@@ -189,6 +189,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   titleInput: {
+    fontFamily:"DMSerifDisplay-Regular",
     fontSize: windowWidth * 0.09,
     fontWeight: "600",
     color: "#999",
@@ -212,23 +213,22 @@ const styles = StyleSheet.create({
     color: "#333",
   },
   input: {
-    height: 50,
-    borderColor: "#999",
-    borderRadius: 10,
-    paddingHorizontal: 15,
-    fontSize: 16,
-    marginBottom: 10,
+    fontFamily:"DMSans-Regular",
+    height:windowWidth*0.12,
+    paddingHorizontal: windowWidth*0.01,
+    fontSize: windowWidth*0.03,
+    marginBottom: windowWidth*0.01,
     width: "100%",
-    backgroundColor: "white",
   },
   actionRow: {
+    marginRight:windowWidth*0.1,
     flexDirection: "row",
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: windowWidth*0.01,
   },
   actionText: {
-    fontSize: 14,
-    fontWeight: "bold",
+    fontFamily:"DMSans-Bold",
+    fontSize: windowWidth*0.035,
     color: "#000",
   },
   separator: {
@@ -258,7 +258,7 @@ const styles = StyleSheet.create({
     height: windowWidth * 2.2,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(141, 141, 141, 0.8)", // %80 şeffaf gri arka plan
+    backgroundColor: "rgba(141, 141, 141, 0.8)",
     borderRadius: 10,
     padding: 10,
   },
@@ -282,6 +282,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   modalButtonText: {
+    fontFamily:"DMSans-Bold",
     color: "black",
     fontSize: 12,
     fontWeight: "bold",
@@ -297,7 +298,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   modalCloseButtonText: {
-    fontWeight:"bold",
+    fontFamily:"DMSans-Bold",
     color: "black",
     fontSize: 12,
   },

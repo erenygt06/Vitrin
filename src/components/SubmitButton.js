@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   text: {
+    fontFamily: "DMSans-Medium",
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',

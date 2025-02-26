@@ -22,7 +22,7 @@ const PasswordField = ({ onSave }) => {
       <Text style={styles.label}>Şifre</Text>
 
       {!isEditing ? (
-        // 📌 Şifre gösterme alanı ve "Değiştir" butonu
+        
         <View style={styles.inputContainer}>
           <TextInput style={styles.input} value="********" editable={false} />
           <TouchableOpacity style={styles.button} onPress={() => setIsEditing(true)}>
@@ -30,7 +30,7 @@ const PasswordField = ({ onSave }) => {
           </TouchableOpacity>
         </View>
       ) : (
-        // 📌 Şifre değiştirme alanları
+        
         <View>
           <View style={styles.inputRow}>
             <TextInput
@@ -72,12 +72,13 @@ const PasswordField = ({ onSave }) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 15,
+    marginBottom: windowWidth*0.05,
   },
   label: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 8,
+    fontFamily: "DMSans-Regular",
+    fontSize: windowWidth*0.04,
+    marginBottom: windowWidth*0.04,
+    fontWeight:"bold",
   },
   inputContainer: {
     flexDirection: "row",
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   input: {
-    width: windowWidth * 0.55, // 📌 Input genişliği butonlara göre ayarlandı
+    width: windowWidth * 0.55,
     height: 50,
     borderWidth: 1,
     borderColor: "#ddd",
@@ -101,7 +102,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   cancelButton: {
-    width: windowWidth * 0.3, // 📌 Butonlar yan yana tam oturdu
+    width: windowWidth * 0.3, 
     borderWidth: 1,
     borderColor: "black",
     paddingVertical: 12,
@@ -109,11 +110,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   cancelButtonText: {
-    fontSize: 14,
+    fontFamily: "DMSans-Regular",
+    fontSize: windowWidth*0.04,
     fontWeight: "bold",
   },
   saveButton: {
-    width: windowWidth * 0.3, // 📌 Butonlar eşit genişlikte olacak
+    width: windowWidth * 0.3, 
     paddingVertical: 12,
     borderRadius: 8,
     alignItems: "center",
@@ -125,12 +127,13 @@ const styles = StyleSheet.create({
     backgroundColor: "gray",
   },
   saveButtonText: {
-    fontSize: 14,
+    fontFamily: "DMSans-Regular",
+    fontSize: windowWidth*0.04,
     fontWeight: "bold",
     color: "white",
   },
   button: {
-    width: windowWidth * 0.25, // 📌 "Değiştir" butonu daha dar
+    width: windowWidth * 0.25,
     height: 50,
     justifyContent: "center",
     alignItems: "center",
@@ -139,7 +142,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: windowWidth*0.04,
     fontWeight: "bold",
   },
 });

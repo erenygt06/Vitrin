@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   tabText: {
+    fontFamily:"DMSans-Medium",
     fontSize: 12,
     color: "#777",
   },
